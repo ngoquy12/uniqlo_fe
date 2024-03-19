@@ -1,12 +1,8 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "./index.css";
 
 // import required modules
@@ -36,41 +32,21 @@ export default function Slider() {
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img
-            className="w-full h-full object-cover"
-            src="https://im.uniqlo.com/global-cms/spa/resf2b6936ab05a2b4c882cd1875418307bfr.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="w-full h-full object-cover"
-            src="https://im.uniqlo.com/global-cms/spa/res725d31eb121770bace68cf8e0fb98295fr.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="w-full h-full object-cover"
-            src="https://im.uniqlo.com/global-cms/spa/res12361a01efe2303b89ec0b0d680f6f72fr.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="w-full h-full object-cover"
-            src="https://im.uniqlo.com/global-cms/spa/resbf2a4cae56043c37139bfcf43c65ec90fr.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="w-full h-full object-cover"
-            src="https://im.uniqlo.com/global-cms/spa/resda7b6b84fde2f97b8283d14b48795884fr.jpg"
-            alt=""
-          />
-        </SwiperSlide>
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+        <div className="autoplay-progress" slot="container-end">
+          <svg viewBox="0 0 48 48" ref={progressCircle}>
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref={progressContent}></span>
+        </div>
       </Swiper>
     </>
   );
