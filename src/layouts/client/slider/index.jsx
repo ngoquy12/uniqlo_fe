@@ -32,15 +32,41 @@ export default function Slider() {
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="w-full h-full"
+            src="https://im.uniqlo.com/global-cms/spa/res0d1ec3c07108fa4ce1f1a0506b944cb8fr.jpg"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="w-full h-full"
+            src="https://im.uniqlo.com/global-cms/spa/resa1545c5e22dde91f6b0be4899def258afr.jpg"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="w-full h-full"
+            src="https://im.uniqlo.com/global-cms/spa/res2d1b6eccf051fb70d7103cebcf3ac287fr.jpg"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="w-full h-full"
+            src="https://im.uniqlo.com/global-cms/spa/res2d1b6eccf051fb70d7103cebcf3ac287fr.jpg"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="w-full h-full"
+            src="https://im.uniqlo.com/global-cms/spa/rescae0fa9632f7896e2dba4055b544fef8fr.jpg"
+            alt=""
+          />
+        </SwiperSlide>
         <div className="autoplay-progress" slot="container-end">
           <svg viewBox="0 0 48 48" ref={progressCircle}>
             <circle cx="24" cy="24" r="20"></circle>
