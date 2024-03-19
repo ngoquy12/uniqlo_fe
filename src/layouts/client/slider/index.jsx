@@ -9,12 +9,6 @@ import "./index.css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 export default function Slider() {
-  const progressCircle = useRef(null);
-  const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
   return (
     <>
       <Swiper
@@ -29,7 +23,6 @@ export default function Slider() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
       >
         <SwiperSlide>

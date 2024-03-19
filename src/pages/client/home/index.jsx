@@ -4,7 +4,7 @@ import Slider from "../../../layouts/client/slider";
 export default function HomePage() {
   return (
     <>
-      {/* <Slider /> */}
+      <Slider />
       <p className="p-6">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
         exercitationem quisquam minima non aliquid fugiat ea debitis, et porro
