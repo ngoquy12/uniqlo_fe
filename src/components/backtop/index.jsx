@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import IconBacktop from "../../../public/images/backtotop.svg";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 export default function BackToTop() {
   const [show, setShow] = useState(false);
@@ -41,9 +41,9 @@ export default function BackToTop() {
       {show && (
         <nav
           onClick={scrollToTop}
-          class="fixed z-10 bottom-[40px] shadow-md right-[30px] cursor-pointer border p-2 rounded"
+          class="fixed bg-blue-600 z-10 bottom-[40px] shadow-md right-[30px] cursor-pointer border p-2 rounded"
         >
-          <img className="text-[28px]" src={IconBacktop} alt="Icon backtotop" />
+          <ArrowUpwardIcon className="text-white" />
         </nav>
       )}
     </>

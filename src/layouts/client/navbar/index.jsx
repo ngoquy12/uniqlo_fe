@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
-      <nav className="w-full h-[72px] bg-white py-0 border-b border-solid border-b-[rgb(204, 204, 204)]">
+      <nav className="sticky top-0 z-40 w-full h-[72px] bg-white py-0 border-b border-solid border-b-[rgb(204, 204, 204)]">
         <div className="py-0 px-5 my-0 mx-[124px] h-full flex justify-between items-center">
           <div className="flex items-center gap-5">
             <Link className="mr-[28px]">
