@@ -18,13 +18,17 @@ export default function Navbar() {
         {showInput ? (
           <>
             <div className="absolute h-full w-full gap-3 flex items-center justify-center">
-              <Input
-                className="h-[40px] w-[50%]"
-                placeholder="Tìm kiếm theo từ khóa"
-              />
-              <Tooltip title="Tìm kiếm">
-                <SearchOutlined className="absolute right-[27%] cursor-pointer" />
-              </Tooltip>
+              <div className="flex w-[50%] items-center">
+                <Input
+                  className="h-[40px] rounded-r-none"
+                  placeholder="Tìm kiếm theo từ khóa"
+                />
+                <Tooltip title="Tìm kiếm">
+                  <div className="h-10 flex items-center border px-2 bg-black rounded-r-[4px] text-white">
+                    <SearchOutlined className="cursor-pointer" />
+                  </div>
+                </Tooltip>
+              </div>
               <Tooltip onClick={() => setShowInput(false)} title="Đóng">
                 <CloseSharp className="cursor-pointer hover:text-gray-800" />
               </Tooltip>
@@ -73,12 +77,12 @@ export default function Navbar() {
                   </div>
                 </Tooltip>
                 <Tooltip title="Giỏ hàng">
-                  <div className="relative">
+                  <Link to="/cart" className="relative">
                     <ShoppingCartIcon className="cursor-pointer text-[24px]" />
                     <span className="absolute px-2 py-0 rounded-full top-[-3px] right-[-18px] text-[10px] bg-[#EB3333] text-white font-semibold">
                       2
                     </span>
-                  </div>
+                  </Link>
                 </Tooltip>
               </div>
             </div>

@@ -1,0 +1,8 @@
+#list-cart::-webkit-scrollbar {
+  display: none;
+  transition: display 3s linear;
+}
+
+#list-cart:hover::-webkit-scrollbar {
+  /* display: block; */
+}
