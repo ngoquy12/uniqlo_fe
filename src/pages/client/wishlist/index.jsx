@@ -53,7 +53,10 @@ export default function Wishlist() {
               )}
             </div>
             <div>
-              <Link className="text-[18px] uppercase font-semibold">
+              <Link
+                to="/product-detail/1"
+                className="text-[18px] uppercase font-semibold"
+              >
                 Áo thun dáng Mini ngắn tay
               </Link>
               <div className="text-[16px] flex flex-col gap-2 my-5">
