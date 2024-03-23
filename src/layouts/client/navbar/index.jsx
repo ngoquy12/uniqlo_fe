@@ -4,16 +4,32 @@ import PersonIcon from "@mui/icons-material/Person";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Logo from "../../../../public/images/logo-header.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Input, Tooltip } from "antd";
 import { CloseSharp, SearchOutlined } from "@mui/icons-material";
-const { Search } = Input;
+import ModalMain from "../../../components/modal/ModalMain";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [showInput, setShowInput] = useState(false);
+  const [showModalLogin, setShowModalLogin] = useState(false);
+  const isLogin = true;
+
+  const handleRedirect = () => {
+    if (isLogin) {
+      navigate("/wishlist");
+    } else {
+      setShowModalLogin(true);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setShowModalLogin(false);
+  };
 
   return (
     <>
+      {showModalLogin && <ModalMain close={handleCloseModal} />}
       <nav className="sticky top-0 z-40 w-full h-[72px] bg-white py-0 border-b border-solid border-b-[rgb(204, 204, 204)]">
         {showInput ? (
           <>
@@ -69,7 +85,7 @@ export default function Navbar() {
                   </Link>
                 </Tooltip>
                 <Tooltip title="Sản phẩm ưu thích">
-                  <div className="relative">
+                  <div onClick={handleRedirect} className="relative">
                     <FavoriteBorderIcon className="cursor-pointer text-[24px]" />
                     <span className="absolute px-2 py-0 rounded-full top-[-3px] right-[-18px] text-[10px] bg-[#EB3333] text-white font-semibold">
                       2

@@ -9,6 +9,8 @@ import Register from "./pages/auth/register";
 import Cart from "./pages/client/cart";
 import Modal from "./components/modal/Modal";
 import ProductDetail from "./pages/client/productDetail";
+import ModalMain from "./components/modal/ModalMain";
+import Wishlist from "./pages/client/wishlist";
 
 export default function App() {
   const location = useLocation();
@@ -29,6 +31,7 @@ export default function App() {
           <Route path="register" element={<Register />} />
           <Route path="cart" element={<Cart />} />
           <Route path="product-detail/:id" element={<ProductDetail />} />
+          <Route path="wishlist" element={<Wishlist />} />
         </Route>
       </Routes>
       <BackToTop />

@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function ProductDetail() {
+  const [showOverview, setShowOverview] = useState(false);
+  const [showMaterial, setShowMaterial] = useState(false);
   const images = [
     "http://lavenderstudio.com.vn/wp-content/uploads/2019/09/chup-hinh-quang-cao-quan-ao.jpg",
     "https://timmedia.net/wp-content/uploads/2020/08/09-13.jpg",
@@ -57,32 +61,134 @@ export default function ProductDetail() {
                 ))}
               </div>
             </div>
-            <div className="w-[80%] border h-[520px] relative">
-              <div
-                className="w-full h-full image-main"
-                style={{
-                  backgroundImage: `url(${images[currentIndex]})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "100% 100%",
-                }}
-              >
-                <button
-                  className="carousel-button carousel-button-prev"
-                  onClick={handlePrevImage}
+            <div className="w-[70%]">
+              <div className="w-full h-[520px] relative flex flex-col gap-2">
+                <div
+                  className="w-full h-full image-main rounded-lg"
+                  style={{
+                    backgroundImage: `url(${images[currentIndex]})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100% 100%",
+                  }}
                 >
-                  <ArrowBackIosIcon />
-                </button>
-                <button
-                  className="carousel-button carousel-button-next"
-                  onClick={handleNextImage}
-                >
-                  <ArrowForwardIosIcon />
-                </button>
+                  <button
+                    className="carousel-button carousel-button-prev"
+                    onClick={handlePrevImage}
+                  >
+                    <ArrowBackIosIcon />
+                  </button>
+                  <button
+                    className="carousel-button carousel-button-next"
+                    onClick={handleNextImage}
+                  >
+                    <ArrowForwardIosIcon />
+                  </button>
+                </div>
+                <div>
+                  {currentIndex + 1} / {images.length}
+                </div>
               </div>
-              {currentIndex + 1} / {images.length}
+              <div className="mt-5 flex flex-col gap-4">
+                <div className="flex justify-between">
+                  <h1 className="text-[20px]">Mô tả</h1>
+                  <div className="flex flex-col text-[#7d7d7d]">
+                    <span>Mã sản phẩm:</span>
+                    <span>459793</span>
+                  </div>
+                </div>
+                <div className="border-b"></div>
+                <div className="flex justify-between">
+                  <h1 className="text-[20px]">Tổng quan</h1>
+                  <div className="flex flex-col text-[#7d7d7d]">
+                    {showOverview ? (
+                      <>
+                        <ExpandMoreIcon
+                          onClick={() => setShowOverview(!showOverview)}
+                          className="cursor-pointer transition-all"
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <KeyboardArrowUpIcon
+                          onClick={() => setShowOverview(!showOverview)}
+                          className="cursor-pointer transition-all"
+                        />
+                      </>
+                    )}
+                  </div>
+                </div>
+                {showOverview && (
+                  <div>
+                    <p>
+                      - Chất liệu 'HEATTECH' với tính năng GIỮ NHIỆT và Hấp thụ
+                      nhiệt cùng với lông cừu giữ nhiệt.
+                    </p>
+                    <p>- Lông cừu pha sợi nhân tạo acrylic mềm mại.</p>
+                    <p>- Có độ co dãn tạo cảm giác thoải mái.</p>
+                    <p>- Thiết kế cổ lọ giúp tăng thêm sự ấm áp.</p>
+                    <p>
+                      - Thiết kế rộng rãi ở vai mang lại phong cách cực kì dễ
+                      chịu.
+                    </p>
+                    <p>
+                      - Một sản phẩm mà bạn có thể tạo kiểu đa năng. - Kết hợp
+                      tốt với mọi loại quần.
+                    </p>
+                  </div>
+                )}
+                <div className="border-b"></div>
+                <div className="flex justify-between">
+                  <h1 className="text-[20px]">Chất liệu</h1>
+                  <div className="flex flex-col text-[#7d7d7d]">
+                    {showMaterial ? (
+                      <>
+                        <ExpandMoreIcon
+                          onClick={() => setShowMaterial(!showMaterial)}
+                          className="cursor-pointer transition-all"
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <KeyboardArrowUpIcon
+                          onClick={() => setShowMaterial(!showMaterial)}
+                          className="cursor-pointer transition-all"
+                        />
+                      </>
+                    )}
+                  </div>
+                </div>
+                {showMaterial && (
+                  <div>
+                    <p>
+                      - Chất liệu 'HEATTECH' với tính năng GIỮ NHIỆT và Hấp thụ
+                      nhiệt cùng với lông cừu giữ nhiệt.
+                    </p>
+                    <p>- Lông cừu pha sợi nhân tạo acrylic mềm mại.</p>
+                    <p>- Có độ co dãn tạo cảm giác thoải mái.</p>
+                    <p>- Thiết kế cổ lọ giúp tăng thêm sự ấm áp.</p>
+                    <p>
+                      - Thiết kế rộng rãi ở vai mang lại phong cách cực kì dễ
+                      chịu.
+                    </p>
+                    <p>
+                      - Một sản phẩm mà bạn có thể tạo kiểu đa năng. - Kết hợp
+                      tốt với mọi loại quần.
+                    </p>
+                  </div>
+                )}
+                <div className="border-b"></div>
+                <div className="flex justify-between">
+                  <h1 className="text-[20px]">Chất liệu</h1>
+                  <div className="flex flex-col text-[#7d7d7d]">
+                    <Link>
+                      <ArrowForwardIosIcon style={{ fontSize: 20 }} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
-          <article className="flex-1 border">
+          <article className="flex-1">
             <h1 className="text-[45px] text-[#1b1b1b] font-bold">
               HEATTECH Áo Giả Lông Cừu Cổ Lọ Dài Tay
             </h1>
@@ -93,7 +199,6 @@ export default function ProductDetail() {
             <div style={{ borderBottom: "1px solid rgb(224, 224, 224)" }}></div>
           </article>
         </section>
-        <div className=" bg-red-500 w-[50%]">hi</div>
       </main>
     </>
   );
