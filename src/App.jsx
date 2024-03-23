@@ -8,6 +8,7 @@ import Login from "./pages/auth/login/index";
 import Register from "./pages/auth/register";
 import Cart from "./pages/client/cart";
 import Modal from "./components/modal/Modal";
+import ProductDetail from "./pages/client/productDetail";
 
 export default function App() {
   const location = useLocation();
@@ -22,11 +23,12 @@ export default function App() {
   return (
     <>
       <Routes>
+        <Route path="login" element={<Login />} />
         <Route path="/" element={<PublicRouter />}>
           <Route index element={<HomePage />} />
-          <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="product-detail/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
       <BackToTop />
