@@ -40,14 +40,96 @@ export default function Wishlist() {
                 <>
                   <FavoriteIcon
                     onClick={() => setIsTym(false)}
-                    className="absolute top-3 right-3 cursor-pointer text-red-600"
+                    className="absolute top-3 right-3 cursor-pointer text-[#f00]"
                   />
                 </>
               ) : (
                 <>
                   <FavoriteBorderIcon
                     onClick={() => setIsTym(true)}
-                    className="absolute top-3 right-3 cursor-pointer"
+                    className="absolute top-3 right-3 cursor-pointer text-[#f00]"
+                  />
+                </>
+              )}
+            </div>
+            <div>
+              <Link
+                to="/product-detail/1"
+                className="text-[18px] uppercase font-semibold"
+              >
+                Áo thun dáng Mini ngắn tay
+              </Link>
+              <div className="text-[16px] flex flex-col gap-2 my-5">
+                <p className="text-[#7d7d7d]">Mã sản phẩm: 465760</p>
+                <p>Màu sắc: 52 GREEN</p>
+                <p>Kích cỡ: Nữ</p>
+              </div>
+              <strong className="text-[22px] font-semibold uppercase">
+                293.000 VND
+              </strong>
+            </div>
+          </div>
+          <div className="border-b my-[28px]"></div>
+          <div className="flex gap-5">
+            <div className="w-[219px] h-[219px] relative">
+              <img
+                className="object-cover w-full h-full"
+                src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465760/item/vngoods_52_465760.jpg?width=250"
+                alt=""
+              />
+              {isTym ? (
+                <>
+                  <FavoriteIcon
+                    onClick={() => setIsTym(false)}
+                    className="absolute top-3 right-3 cursor-pointer text-[#f00]"
+                  />
+                </>
+              ) : (
+                <>
+                  <FavoriteBorderIcon
+                    onClick={() => setIsTym(true)}
+                    className="absolute top-3 right-3 cursor-pointer text-[#f00]"
+                  />
+                </>
+              )}
+            </div>
+            <div>
+              <Link
+                to="/product-detail/1"
+                className="text-[18px] uppercase font-semibold"
+              >
+                Áo thun dáng Mini ngắn tay
+              </Link>
+              <div className="text-[16px] flex flex-col gap-2 my-5">
+                <p className="text-[#7d7d7d]">Mã sản phẩm: 465760</p>
+                <p>Màu sắc: 52 GREEN</p>
+                <p>Kích cỡ: Nữ</p>
+              </div>
+              <strong className="text-[22px] font-semibold uppercase">
+                293.000 VND
+              </strong>
+            </div>
+          </div>
+          <div className="border-b my-[28px]"></div>
+          <div className="flex gap-5">
+            <div className="w-[219px] h-[219px] relative">
+              <img
+                className="object-cover w-full h-full"
+                src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465760/item/vngoods_52_465760.jpg?width=250"
+                alt=""
+              />
+              {isTym ? (
+                <>
+                  <FavoriteIcon
+                    onClick={() => setIsTym(false)}
+                    className="absolute top-3 right-3 cursor-pointer text-[#f00]"
+                  />
+                </>
+              ) : (
+                <>
+                  <FavoriteBorderIcon
+                    onClick={() => setIsTym(true)}
+                    className="absolute top-3 right-3 cursor-pointer text-[#f00]"
                   />
                 </>
               )}

@@ -154,6 +154,11 @@ export default function Register() {
                 <Link>Điều khoản sử dụng</Link>
                 <Link>Chính sách bảo mật</Link>
               </div>
+              <div className="mt-[40px]">
+                <button className="w-[50%] h-[45px] bg-[#1b1b1b] text-white uppercase cursor-pointer text-[18px]">
+                  Đăng ký
+                </button>
+              </div>
             </div>
           </form>
         </main>

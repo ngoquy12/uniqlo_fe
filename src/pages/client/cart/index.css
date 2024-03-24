@@ -3,6 +3,26 @@
   transition: display 3s linear;
 }
 
-#list-cart:hover::-webkit-scrollbar {
-  /* display: block; */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 30px;
+  color: #1b1b1b;
+  font-weight: 600;
 }

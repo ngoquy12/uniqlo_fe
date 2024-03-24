@@ -41,7 +41,7 @@ export default function BackToTop() {
       {show && (
         <nav
           onClick={scrollToTop}
-          class="fixed bg-blue-600 z-10 bottom-[40px] shadow-md right-[30px] cursor-pointer border p-2 rounded"
+          className="fixed bg-blue-600 z-10 bottom-[40px] shadow-md right-[30px] cursor-pointer border p-2 rounded"
         >
           <ArrowUpwardIcon className="text-white" />
         </nav>

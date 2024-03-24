@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
-import Logo from "../public/images/logo-header.svg";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import PublicRouter from "./routes/PublicRouter";
 import HomePage from "./pages/client/home";
 import BackToTop from "./components/backtop";
 import Login from "./pages/auth/login/index";
 import Register from "./pages/auth/register";
 import Cart from "./pages/client/cart";
-import Modal from "./components/modal/Modal";
 import ProductDetail from "./pages/client/productDetail";
-import ModalMain from "./components/modal/ModalMain";
 import Wishlist from "./pages/client/wishlist";
+import Checkout from "./pages/client/checkout";
 
 export default function App() {
   const location = useLocation();
@@ -32,6 +30,7 @@ export default function App() {
           <Route path="cart" element={<Cart />} />
           <Route path="product-detail/:id" element={<ProductDetail />} />
           <Route path="wishlist" element={<Wishlist />} />
+          <Route path="checkout" element={<Checkout />} />
         </Route>
       </Routes>
       <BackToTop />
