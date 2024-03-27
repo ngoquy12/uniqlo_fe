@@ -41,3 +41,9 @@
     opacity: 1;
   }
 }
+
+.dot-selected {
+  width: 18px !important;
+  height: 18px !important;
+  background: #000 !important;
+}
