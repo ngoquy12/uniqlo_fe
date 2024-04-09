@@ -17,6 +17,7 @@ import MemberChangePassword from "./pages/client/member/change-password";
 import Order from "./pages/client/member/order";
 import PurchaseHistory from "./pages/client/member/purchase-history";
 import CouponWallet from "./pages/client/member/coupon-wallet";
+import Collection from "./pages/client/collections";
 
 export default function App() {
   const location = useLocation();
@@ -51,6 +52,7 @@ export default function App() {
             <Route />
             <Route />
           </Route>
+          <Route path="/collection" element={<Collection />} />
         </Route>
       </Routes>
       <BackToTop />

@@ -1,0 +1,22 @@
+.tab-active {
+  border-bottom: 4px solid #378694;
+  color: #1b1b1b !important;
+}
+
+.sort-active {
+  background-color: rgba(0, 0, 0, 0.035);
+  color: #378694;
+}
+
+.reverse-icon {
+  animation: rotateIcon 0.3s linear forwards;
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}

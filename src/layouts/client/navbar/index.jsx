@@ -24,19 +24,19 @@ export default function Navbar() {
   const categories = [
     {
       id: 1,
-      name: "Nữ",
+      name: "Women",
     },
     {
       id: 2,
-      name: "Nam",
+      name: "Men",
     },
     {
       id: 3,
-      name: "Trẻ em",
+      name: "Kids",
     },
     {
       id: 4,
-      name: "Trẻ sơ sinh",
+      name: "Baby",
     },
   ];
 
@@ -131,18 +131,19 @@ export default function Navbar() {
                 <Link to="/" className="mr-[28px]">
                   <img src={Logo} alt="Logo" />
                 </Link>
-                <ul className="flex gap-4" onMouseLeave={handleCloseCategories}>
+                <ul className="flex gap-8" onMouseLeave={handleCloseCategories}>
                   {categories.map((cat) => (
-                    <li
+                    <Link
+                      to="/collection"
                       onMouseEnter={() => handleOpenCategories(cat.id)}
                       key={cat.id}
                       className="relative"
                     >
-                      <span className="uppercase font-semibold hover:text-[#424242] cursor-pointer">
+                      <span className="uppercase text-[#8c8b8b] font-semibold hover:text-[#424242] cursor-pointer">
                         {cat.name}
                       </span>
                       {showCategory && <Categories />}
-                    </li>
+                    </Link>
                   ))}
                 </ul>
               </div>
