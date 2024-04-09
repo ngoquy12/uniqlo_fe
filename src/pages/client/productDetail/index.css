@@ -47,3 +47,17 @@
   height: 18px !important;
   background: #000 !important;
 }
+
+.color-active {
+  background-color: #281919;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1f1a1a;
+}
+
+#icon-dropdown {
+  transition: all 0.2s linear;
+}
+
+.dropdown-rote {
+  transform: rotate(-180deg);
+}

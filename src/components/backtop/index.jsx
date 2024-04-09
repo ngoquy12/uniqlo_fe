@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 export default function BackToTop() {
   const [show, setShow] = useState(false);
@@ -41,9 +42,9 @@ export default function BackToTop() {
       {show && (
         <nav
           onClick={scrollToTop}
-          className="fixed bg-blue-600 z-10 bottom-[40px] shadow-md right-[30px] cursor-pointer border p-2 rounded"
+          className="fixed bg-[#7d7d7d] hover:bg-[#888787] z-10 bottom-[40px] shadow-md right-[30px] cursor-pointer border p-2 rounded"
         >
-          <ArrowUpwardIcon className="text-white" />
+          <ExpandLessIcon className="text-white" />
         </nav>
       )}
     </>

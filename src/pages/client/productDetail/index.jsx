@@ -6,16 +6,45 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Rate } from "antd";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function ProductDetail() {
   const [showOverview, setShowOverview] = useState(false);
   const [showMaterial, setShowMaterial] = useState(false);
+  const [showQuantity, setShowQuantity] = useState(false);
   const images = [
     "http://lavenderstudio.com.vn/wp-content/uploads/2019/09/chup-hinh-quang-cao-quan-ao.jpg",
     "https://timmedia.net/wp-content/uploads/2020/08/09-13.jpg",
     "https://symbols.vn/wp-content/uploads/2021/12/Mau-Quan-Ao-Anime-Dep-cho-nu.jpg",
     "https://tse2.explicit.bing.net/th?id=OIP.W_wnel94xkF9zW4LqglrWwHaKG&pid=Api&P=0&h=180",
     "https://lh6.googleusercontent.com/-6sSFhUUUtKhn5mct6a0vXthtViwD1G2UzD-Nory_TYqzpyG0wuFVsaszYoSaBW_RQvvhzxKEfi1jLseD8Dgje3DjjUGDRjxcmsuXgXMOCMly_UzI4ST9jmEhwaA7V0Inll5-tvp",
+  ];
+
+  const colors = [
+    {
+      id: 1,
+      color: "red",
+    },
+    {
+      id: 2,
+      color: "green",
+    },
+    {
+      id: 3,
+      color: "blue",
+    },
+    {
+      id: 4,
+      color: "black",
+    },
+    {
+      id: 5,
+      color: "yellow",
+    },
+    {
+      id: 6,
+      color: "pink",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,7 +83,7 @@ export default function ProductDetail() {
           <span>/</span>
           <span>HEATTECH Áo Giả Lông Cừu Cổ Lọ Dài Tay</span>
         </div>
-        <section className="flex gap-3 mb-[40px]">
+        <section className="flex gap-10 mb-[40px]">
           <div className="flex flex-1 flex-col gap-[88px]">
             <article className=" flex w-full gap-6">
               <div className="w-[20%]">
@@ -435,7 +464,158 @@ export default function ProductDetail() {
             <p>
               Một kết hợp từ sự thoải mái cùng độ ấm áp trong thiết kế cổ lọ.
             </p>
-            <div style={{ borderBottom: "1px solid rgb(224, 224, 224)" }}></div>
+            <div className="my-5 border-b"></div>
+            <aside className="mb-5">
+              <div className="uppercase text-[14px] font-semibold">
+                <strong className="mr-1">Màu sắc:</strong>
+                <span>03 gray</span>
+              </div>
+              <div className="flex gap-2 mt-[11px]">
+                {colors.map((cl) => (
+                  <div
+                    key={cl.id}
+                    className={`size-[45px] border bg-${cl.color}-500 `}
+                  ></div>
+                ))}
+              </div>
+            </aside>
+            <aside>
+              <div className="uppercase text-[14px] font-semibold flex items-center justify-between">
+                <div>
+                  <strong className="mr-1">Kích thước:</strong>
+                  <span>Nữ S</span>
+                </div>
+                <div className="flex items-center uppercase text-[14px] font-bold">
+                  <strong className="mr-1">
+                    <img
+                      height={24}
+                      width={24}
+                      src="https://tse4.mm.bing.net/th?id=OIP.BofAAsdNRyN-d3ikDZMsEQAAAA&pid=Api&P=0&h=180"
+                      alt=""
+                    />
+                  </strong>
+                  <Link className="underline">Chọn kích thước</Link>
+                </div>
+              </div>
+              <div className="flex gap-2 mt-[11px] mb-5">
+                <div
+                  className={`size-[45px] border bg-white text-center leading-[45px]`}
+                >
+                  XS
+                </div>
+                <div
+                  className={`size-[45px] border bg-white text-center leading-[45px]`}
+                >
+                  S
+                </div>
+                <div
+                  className={`size-[45px] border bg-white text-center leading-[45px]`}
+                >
+                  M
+                </div>
+                <div
+                  className={`size-[45px] border bg-white text-center leading-[45px]`}
+                >
+                  L
+                </div>
+                <div
+                  className={`size-[45px] border bg-white text-center leading-[45px]`}
+                >
+                  XL
+                </div>
+                <div
+                  className={`size-[45px] border bg-white text-center leading-[45px]`}
+                >
+                  XXL
+                </div>
+              </div>
+              <div>
+                <button className="h-[45px] text-[16px] uppercase font-bold hover:opacity-70 border border-[#7d7d7d] w-full py-2 px-1">
+                  Kích thước theo chiều cao
+                </button>
+              </div>
+              <div className="mt-4">
+                <label htmlFor="" className="uppercase font-semibold">
+                  Số lượng
+                </label>
+                <div className="w-[134px] mt-4">
+                  <div className="border px-3 h-[45px] flex items-center justify-between">
+                    <span>1</span>
+                    <KeyboardArrowDownIcon
+                      id="icon-dropdown"
+                      onClick={() => setShowQuantity(!showQuantity)}
+                      className={`cursor-pointer hover:opacity-70 ${
+                        !showQuantity ? "dropdown-rote" : ""
+                      }`}
+                    />
+                  </div>
+                  {showQuantity && (
+                    <ul className="w-full border">
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        1
+                      </li>
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        2
+                      </li>
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        3
+                      </li>
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        4
+                      </li>
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        5
+                      </li>
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        6
+                      </li>
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        7
+                      </li>
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        8
+                      </li>
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        9
+                      </li>
+                      <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
+                        10
+                      </li>
+                    </ul>
+                  )}
+                </div>
+                <p className="text-[14px] text-[#7d7d7d] mt-1">Còn hàng</p>
+              </div>
+              <div className="mt-[28px] mb-[20px]">
+                <button className="h-[45px] text-[16px] bg-[#ff0000] text-white uppercase font-bold hover:opacity-85 w-full py-2 px-1">
+                  Thêm vào giỏ hàng
+                </button>
+              </div>
+              <div className="flex gap-6">
+                <button className="flex-1 text-[16px] uppercase font-bold hover:opacity-70 border border-[#7d7d7d] w-[288px] py-2 px-1">
+                  Thêm vào danh sách mong muốn
+                </button>
+                <button className="flex-1 text-[16px] uppercase font-bold hover:opacity-70 border border-[#7d7d7d] w-[288px] py-2 px-1">
+                  Tìm sản phẩm còn hàng trong giỏ hàng
+                </button>
+              </div>
+              <div className="border-b my-5"></div>
+              <div className="text-[16px] uppercase font-bold">Chia sẻ</div>
+              <div className="flex items-center gap-6 mt-3">
+                <img
+                  height={45}
+                  width={45}
+                  src="https://tse4.mm.bing.net/th?id=OIP.H836RvDYYgQZcZn0TC8qBAHaHa&pid=Api&P=0&h=180"
+                  alt=""
+                />
+                <img
+                  height={45}
+                  width={45}
+                  src="https://cdn.freebiesupply.com/logos/large/2x/facebook-4-logo-png-transparent.png"
+                  alt=""
+                />
+              </div>
+            </aside>
           </article>
         </section>
       </main>
