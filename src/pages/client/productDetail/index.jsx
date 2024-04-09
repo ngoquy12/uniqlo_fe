@@ -538,7 +538,7 @@ export default function ProductDetail() {
                 <label htmlFor="" className="uppercase font-semibold">
                   Số lượng
                 </label>
-                <div className="w-[134px] mt-4">
+                <div className="w-[134px] mt-4 relative">
                   <div className="border px-3 h-[45px] flex items-center justify-between">
                     <span>1</span>
                     <KeyboardArrowDownIcon
@@ -550,7 +550,7 @@ export default function ProductDetail() {
                     />
                   </div>
                   {showQuantity && (
-                    <ul className="w-full border">
+                    <ul className="w-full border absolute bg-white z-20">
                       <li className="p-3 cursor-pointer hover:bg-[#f6f6f6]">
                         1
                       </li>

@@ -7,16 +7,3 @@
   background-color: rgba(0, 0, 0, 0.035);
   color: #378694;
 }
-
-.reverse-icon {
-  animation: rotateIcon 0.3s linear forwards;
-}
-
-@keyframes rotateIcon {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-180deg);
-  }
-}

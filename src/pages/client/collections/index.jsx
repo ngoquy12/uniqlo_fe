@@ -117,9 +117,10 @@ export default function Collection() {
               <div className="flex items-center justify-between h-full">
                 <span className="pl-[15px]">{typeSort?.type}</span>
                 <ExpandMoreIcon
+                  id="icon-dropdown"
                   onClick={() => setShowOption(!showOption)}
                   className={`text-[24px] mr-2 text-[#ababab] cursor-pointer hover:text-[#8c8b8b] ${
-                    !showOption ? "reverse-icon" : ""
+                    !showOption ? "dropdown-rote" : ""
                   }`}
                   style={{ fontSize: 28 }}
                 />
@@ -268,7 +269,7 @@ export default function Collection() {
           </article>
           <main style={{ flex: 3 }} className="">
             <ul className="w-full grid grid-cols-4 gap-5">
-              <li className="">
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -290,8 +291,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -313,8 +314,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -336,8 +337,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -359,8 +360,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -382,8 +383,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -405,8 +406,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -428,8 +429,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -451,8 +452,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -474,8 +475,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -497,8 +498,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -520,8 +521,8 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
+              </Link>
+              <Link to="/product-detail/1" className="">
                 <div className="relative">
                   <img
                     src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
@@ -543,99 +544,7 @@ export default function Collection() {
                 <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
                   224.000 VND
                 </span>
-              </li>
-              <li className="">
-                <div className="relative">
-                  <img
-                    src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
-                    alt=""
-                  />
-                  <FavoriteBorderIcon className="absolute top-[10px] right-[10px]" />
-                </div>
-                <div className="my-[20px]">
-                  <div className="h-4 w-4 bg-[#dadada]"></div>
-                </div>
-                <div className="text-[14px] uppercase mb-5 text-[#ababab] font-bold flex justify-between items-center">
-                  <span className="">Kids</span>
-                  <p>5Y(110)-14Y(160)</p>
-                </div>
-                <h2 className="text-[14px] uppercase mb-5 text-[#ababab] font-bold">
-                  Minecraft Short Sleeve UT
-                </h2>
-                <p className="text-[#7d7d7d] mb-1">Available late Apr</p>
-                <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
-                  224.000 VND
-                </span>
-              </li>
-              <li className="">
-                <div className="relative">
-                  <img
-                    src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
-                    alt=""
-                  />
-                  <FavoriteBorderIcon className="absolute top-[10px] right-[10px]" />
-                </div>
-                <div className="my-[20px]">
-                  <div className="h-4 w-4 bg-[#dadada]"></div>
-                </div>
-                <div className="text-[14px] uppercase mb-5 text-[#ababab] font-bold flex justify-between items-center">
-                  <span className="">Kids</span>
-                  <p>5Y(110)-14Y(160)</p>
-                </div>
-                <h2 className="text-[14px] uppercase mb-5 text-[#ababab] font-bold">
-                  Minecraft Short Sleeve UT
-                </h2>
-                <p className="text-[#7d7d7d] mb-1">Available late Apr</p>
-                <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
-                  224.000 VND
-                </span>
-              </li>
-              <li className="">
-                <div className="relative">
-                  <img
-                    src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
-                    alt=""
-                  />
-                  <FavoriteBorderIcon className="absolute top-[10px] right-[10px]" />
-                </div>
-                <div className="my-[20px]">
-                  <div className="h-4 w-4 bg-[#dadada]"></div>
-                </div>
-                <div className="text-[14px] uppercase mb-5 text-[#ababab] font-bold flex justify-between items-center">
-                  <span className="">Kids</span>
-                  <p>5Y(110)-14Y(160)</p>
-                </div>
-                <h2 className="text-[14px] uppercase mb-5 text-[#ababab] font-bold">
-                  Minecraft Short Sleeve UT
-                </h2>
-                <p className="text-[#7d7d7d] mb-1">Available late Apr</p>
-                <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
-                  224.000 VND
-                </span>
-              </li>
-              <li className="">
-                <div className="relative">
-                  <img
-                    src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471290/item/goods_00_471290.jpg?width=320"
-                    alt=""
-                  />
-                  <FavoriteBorderIcon className="absolute top-[10px] right-[10px]" />
-                </div>
-                <div className="my-[20px]">
-                  <div className="h-4 w-4 bg-[#dadada]"></div>
-                </div>
-                <div className="text-[14px] uppercase mb-5 text-[#ababab] font-bold flex justify-between items-center">
-                  <span className="">Kids</span>
-                  <p>5Y(110)-14Y(160)</p>
-                </div>
-                <h2 className="text-[14px] uppercase mb-5 text-[#ababab] font-bold">
-                  Minecraft Short Sleeve UT
-                </h2>
-                <p className="text-[#7d7d7d] mb-1">Available late Apr</p>
-                <span className="text-[#8c8b8b] uppercase font-bold text-[22px]">
-                  224.000 VND
-                </span>
-              </li>
+              </Link>
             </ul>
             <div className="border-b my-6"></div>
             <div className="flex items-center gap-2 justify-center cursor-pointer hover:text-[#8c8b8b]">
