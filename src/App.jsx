@@ -18,6 +18,10 @@ import Order from "./pages/client/member/order";
 import PurchaseHistory from "./pages/client/member/purchase-history";
 import CouponWallet from "./pages/client/member/coupon-wallet";
 import Collection from "./pages/client/collections";
+import Reviews from "./pages/client/review";
+import CreateReview from "./pages/client/review/CreateReview";
+import ReviewIndex from "./pages/client/review";
+import ListReview from "./pages/client/review/ListReview";
 
 export default function App() {
   const location = useLocation();
@@ -53,6 +57,10 @@ export default function App() {
             <Route />
           </Route>
           <Route path="/collection" element={<Collection />} />
+          <Route path="/reviews" element={<ReviewIndex />}>
+            <Route index element={<ListReview />} />
+            <Route path="new" element={<CreateReview />} />
+          </Route>
         </Route>
       </Routes>
       <BackToTop />

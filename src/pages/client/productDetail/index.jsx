@@ -72,7 +72,7 @@ export default function ProductDetail() {
   return (
     <>
       <main className="mx-[124px] mb-[88px]">
-        <div className="mt-[15px] mb-[52px] flex gap-2 font-normal text-[12px]">
+        <div className="mt-[15px] mb-[52px] flex gap-2 font-normal text-[12px] uppercase">
           <Link className="underline">Uniqlo</Link>
           <span>/</span>
           <Link className="underline">Nữ</Link>
@@ -288,9 +288,11 @@ export default function ProductDetail() {
                 </div>
               </div>
               <div className="mt-[20px] mb-[20px]">
-                <button className="h-[45px] text-[16px] uppercase font-bold hover:opacity-70 border border-[#7d7d7d] w-[288px] py-2 px-1">
-                  Viết bài đánh giá
-                </button>
+                <Link to="/reviews/new">
+                  <button className="h-[45px] text-[16px] uppercase font-bold hover:opacity-70 border border-[#7d7d7d] w-[288px] py-2 px-1">
+                    Viết bài đánh giá
+                  </button>
+                </Link>
               </div>
               <div className="border-b"></div>
               <div className="my-[20px] font-semibold">13 bài đánh giá</div>
@@ -449,9 +451,11 @@ export default function ProductDetail() {
                 </li>
                 <div className="border-b"></div>
                 <div className="mt-[40px] mb-[20px]">
-                  <button className="h-[45px] text-[16px] uppercase font-bold hover:opacity-70 border border-[#7d7d7d] w-[288px] py-2 px-1">
-                    Xem thêm
-                  </button>
+                  <Link to="/reviews">
+                    <button className="h-[45px] text-[16px] uppercase font-bold hover:opacity-70 border border-[#7d7d7d] w-[288px] py-2 px-1">
+                      Xem thêm
+                    </button>
+                  </Link>
                 </div>
               </ul>
             </article>
